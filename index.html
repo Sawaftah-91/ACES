@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>فيديو Google Drive</title>
+  <style>
+    /* جعل الفيديو فقط يشتغل ويخفي معظم العناصر */
+    iframe {
+      width: 800px;
+      height: 450px;
+      border: none;
+    }
+    /* إخفاء المؤشر في حالة عدم التفاعل */
+    iframe:hover {
+      pointer-events: auto;
+    }
+  </style>
+</head>
+<body style="text-align:center; background-color: #f9f9f9; font-family: Arial;">
+
+  <h2>فيديو Google Drive</h2>
+
+  <div style="width:800px; height:450px; margin:auto;">
+    <iframe src="https://drive.google.com/file/d/1cckchvuS-YY_pH9K2AyejBQV3APRjOXz/preview"
+            allow="autoplay" frameborder="0">
+    </iframe>
+  </div>
+
+  <script>
+    // منع النقر بالزر الأيمن أو النسخ واللصق
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('copy', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('cut', function(e) {
+      e.preventDefault();
+    });
+    document.addEventListener('paste', function(e) {
+      e.preventDefault();
+    });
+  </script>
+
+</body>
+</html>
